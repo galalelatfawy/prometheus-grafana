@@ -1,0 +1,15 @@
+---
+domain: pa.jhbcomputers.com
+
+send_to:
+  - <your email to get alerts>
+
+prometheus_hosts:
+  - nginx.pa.jhbcomputers.com
+  - jumper.pa.jhbcomputers.com
+  - nfs.pa.jhbcomputers.com
+  - ns1.pa.jhbcomputers.com
+  - emby.pa.jhbcomputers.com
+  - tower.pa.jhbcomputers.com
+  - ns2.pa.jhbcomputers.com
+  - repos.pa.jhbcomputers.com

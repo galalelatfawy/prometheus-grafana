@@ -1,0 +1,13 @@
+---
+- name: Set up prometheus
+  hosts: localhost
+  gather_facts: true
+  user: centos
+  become: true
+  vars_files:
+  - ../group_vars/jhb.yml
+  - ../group_vars/prometheus.yml
+
+  roles:
+    - prometheus
+    - firewalld
