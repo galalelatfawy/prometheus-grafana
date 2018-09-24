@@ -1,11 +1,11 @@
 ---
 - name: Set up grafana
-  hosts: prom-01
+  hosts: all
   gather_facts: true
   user: centos
   become: true
-  vars_files:
-  - ../group_vars/jhb.yml
+  # vars_files:
+  # - ../group_vars/jhb.yml
 
   roles:
     - grafana
