@@ -1,14 +1,11 @@
-
 ---
-- name: Set up prometheus
+- name: Set up grafana
   hosts: prom-01
   gather_facts: true
   user: centos
   become: true
   vars_files:
   - ../group_vars/jhb.yml
-  - ../group_vars/prometheus.yml
 
   roles:
-    - prometheus
-    - firewalld
+    - grafana

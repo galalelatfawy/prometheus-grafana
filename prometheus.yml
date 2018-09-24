@@ -1,5 +1,13 @@
 ---
-firewalld_ports:
-  - 3000/tcp
-  - 9090/tcp
-  - 9093/tcp
+- name: Set up prometheus
+  hosts: prom-01
+  gather_facts: true
+  user: centos
+  become: true
+  vars_files:
+  - ../group_vars/jhb.yml
+  - ../group_vars/prometheus.yml
+
+  roles:
+    - prometheus
+    - firewalld
