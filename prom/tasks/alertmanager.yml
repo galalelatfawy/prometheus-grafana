@@ -1,20 +1,3 @@
----
-# tasks file for prometheus
-- name: Create alertmanager directory
-  file:
-    path: "{{ alertmanager_dir }}"
-    state: directory
-    owner: root
-    group: root
-    mode: 0755
-
-- name: Get alertmanager
-  unarchive:
-    src: "{{ alertmanager_link }}"
-    dest: "{{ alertmanager_dir }}"
-    remote_src: True
-    extra_opts: "--strip=1"
-
 - name: Copy alertmanager config
   template:
     src: alertmanager.yml.j2

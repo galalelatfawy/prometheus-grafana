@@ -1,10 +1,3 @@
----
-# vars file for prom
-# vars file for prometheus
-
-prometheus_link: https://github.com/prometheus/prometheus/releases/download/v2.4.2/prometheus-2.4.2.linux-amd64.tar.gz
-alertmanager_link: https://github.com/prometheus/alertmanager/releases/download/v0.15.2/alertmanager-0.15.2.linux-amd64.tar.gz
-
 prometheus_dir: /opt/prometheus
 alertmanager_dir: /opt/alertmanager
 systemd_dir: /usr/lib/systemd/system
@@ -17,9 +10,7 @@ evaluation: 5s
 
 smtp_server: smtp.gmail.com
 smtp_port: 587
-from_address: galal.elatfawy@gmail.com
-smtp_username: galal.elatfawy@gmail.com
+from_address: <your from address>
+smtp_username: <your email username>
 smtp_pass: !vault |
           $ANSIBLE_VAULT;1.1;AES256
-
-

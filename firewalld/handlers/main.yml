@@ -1,5 +1,3 @@
----
-# handlers file for firewalld
 # handlers file for firewalld
 - name: reload firewalld
   command: "firewall-cmd --reload"
